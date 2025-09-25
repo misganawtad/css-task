@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "BarlowFont"; /* choose a name */
+  src: url("fonts/Barlow-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "BarlowFont";
+  background-color: #EFF6FF;
+  color: #2A4A5C;
+}
+
+.main-title {
+  color: #2A4A5C;
+  font-size:xx-large;  
+}
+strong {
+    color: #2A4A5C;
+    font-size: x-large;
+}
+p {
+    color: #7B8A92;
+}
+
+.container {
+    background-color: #FFFFFF;
+    padding-right: 50px;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.right-subcontainer {
+    margin-top: 100px;
+}
+
+.facebook {
+    background-color: #255A9B;
+    align-items: center;   
+    color: white;
+    display: flex;
+    border: none;
+    font-size: 14px;
+    padding-right: 30px;
+    margin-right: 20px;
+    width: 300px;
+}
+
+.facebook img {
+    width: 20px;
+    height: 20px;
+    
+}
+
+div {
+    color: #7B8A92;
+}
+
+
+.linkedin {
+    background-color: #0076B6;
+    align-items: center;   
+    color: white;
+    display: flex;
+    border: none;
+    gap: 10px;
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 300px;
+}
+.text-center {
+    text-align: center;
+}
+.linkedin img {
+    width: 20px;
+    height: 20px;
+}
+.row {
+    display: flex;
+    padding-bottom: 20px;
+    
+}
+.column {
+    display: flex;   
+    flex-direction: column;
+}
+.rectangle-email {
+    border: 1px solid #e0e0e0;
+    border-left: 1px solid blue;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    margin-right: 20px;
+    
+}
+
+.rectangle-email input, .rectangle-phone input {
+    border: none;
+    width: 300px;
+
+}
+a {
+    color: #3698FB;
+}
+.rectangle-phone {
+    border: 1px solid #e0e0e0;    
+    padding-bottom: 10px;
+    padding-left: 3px;
+    
+}
+
+hr {
+    width: 20%;
+}
+.box-text {   
+    width: 200px;
+    margin-top: 30px; 
+    margin-bottom: 35px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 10px;
+    color: #7B8A92;
+    font-size: small;
+}
+
+.agreement-box {
+    padding-bottom: 50px;
+    color: #7B8A92;
+}
+.button {
+    color: white;
+    background-color: #3698FB;
+    border: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    accent-color: #007BFF;
+}
+
+
