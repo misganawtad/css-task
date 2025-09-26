@@ -1,66 +1,111 @@
 @font-face {
-  font-family: "BarlowFont"; /* choose a name */
-  src: url("fonts/Barlow-Regular.otf") format("truetype");
-  font-weight: normal;
+  font-family: "BarlowFont";
+  src: url("fonts/Barlow-Regular.woff2") format("woff2"),
+       url("fonts/Barlow-Regular.woff") format("woff"),
+       url("fonts/Barlow-Regular.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
   font-family: "BarlowFont";
   background-color: #EFF6FF;
   color: #2A4A5C;
+  font-size: 14px;
+  font-weight: 400;
+  
 }
 
 .main-title {
   color: #2A4A5C;
   font-size:xx-large;  
 }
-strong {
+h1 {
     color: #2A4A5C;
-    font-size: x-large;
+    font-size: 2.5em;
 }
+
+h2 {
+    color: #2A4A5C;
+    font-size: 1.7em;
+}
+h3 {
+    color: #2A4A5C;
+    font-size: 1.2em;
+}
+h4 {
+    color: #2A4A5C;
+    font-size: 1em;
+}
+
 p {
     color: #7B8A92;
 }
 
 .container {
     background-color: #FFFFFF;
-    padding-right: 50px;
+
+    margin: 50px auto;
+    display: flex;
+
+    align-items: center;
+    width: 60%;
+    justify-content: center;
     gap: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: 50px;
-    margin-left: 50px;
 }
 
 .right-subcontainer {
-    margin-top: 100px;
+    margin-top: 100px;  
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.left-subcontainer{  
+    height: auto;
+    flex: 1;
+}
+.left-subcontainer img {
+    width: 100%;
+    height: auto;
 }
 
-.facebook {
+
+.form {
+    margin-top: 40px;
+    width: 90%;
+}
+
+.form__radio {
+    display: flex;
+   
+    width: 80%;
+    justify-content:space-between;
+}
+.social {
+    display: flex;
+    margin-bottom: 40px;
+    width: 90%;
+    justify-content: center;
+    gap: 20px;
+}
+.social__facebook {
     background-color: #255A9B;
     align-items: center;   
     color: white;
     display: flex;
     border: none;
     font-size: 14px;
-    padding-right: 30px;
-    margin-right: 20px;
-    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+   
+    cursor: pointer;
+    flex: 1;
 }
-
-.facebook img {
-    width: 20px;
-    height: 20px;
-    
-}
-
-div {
-    color: #7B8A92;
-}
-
-
-.linkedin {
+.social__linkedin {
     background-color: #0076B6;
     align-items: center;   
     color: white;
@@ -68,57 +113,49 @@ div {
     border: none;
     gap: 10px;
     font-size: 14px;
-    padding: 10px 20px;
-    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+    cursor: pointer;
+    flex: 1;
+}
+.social__facebook:hover {
+    background-color: #2A4A5C;
+}
+.social__linkedin:hover {
+    background-color: #2A4A5C; 
+}
+.social__facebook img {
+    width: 20px;
+    height: 20px;    
 }
 .text-center {
     text-align: center;
+    justify-content: center;
+    
 }
-.linkedin img {
+.social__linkedin img {
     width: 20px;
     height: 20px;
 }
-.row {
-    display: flex;
-    padding-bottom: 20px;
-    
-}
-.column {
-    display: flex;   
-    flex-direction: column;
-}
-.rectangle-email {
-    border: 1px solid #e0e0e0;
-    border-left: 1px solid blue;
-    padding-bottom: 10px;
-    padding-left: 3px;
-    margin-right: 20px;
-    
-}
 
-.rectangle-email input, .rectangle-phone input {
-    border: none;
-    width: 300px;
 
-}
+
 a {
     color: #3698FB;
 }
-.rectangle-phone {
-    border: 1px solid #e0e0e0;    
-    padding-bottom: 10px;
-    padding-left: 3px;
-    
-}
+
 
 hr {
     width: 20%;
 }
 .box-text {   
-    width: 200px;
+    width: 30%;
     margin-top: 30px; 
     margin-bottom: 35px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(49, 44, 44, 0.1);
     padding: 10px;
     color: #7B8A92;
     font-size: small;
@@ -139,8 +176,50 @@ hr {
     border-radius: 5px;
 }
 
+.form__group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+.input {
+    display: flex;
+    padding-bottom: 20px;
+    flex-direction: column;
+    border: 1px solid #AFAFAF;   
+    width: 100%; 
+    
+}
 input[type="radio"], input[type="checkbox"]{
-    accent-color: #007BFF;
+    border: 2px solid #fff;
+    accent-color: #3698FB;
+     
+    
+}
+
+
+
+.form__group .input:first-child {
+    border-left: 2px solid #3698FB;
+}
+.input__email {
+    border: none;
+    width: 60%;        
+    padding-bottom: 10px;
+    padding-left: 3px;
+    margin-right: 20px;
+}
+.input__email:focus, .input__phone:focus {
+  outline: none;   
+  border: none;
+  box-shadow: none;
+}
+.input__phone {
+    border: none;
+    width: 60%;        
+    padding-bottom: 10px;
+    padding-left: 3px;
+    margin-right: 20px;
 }
 
 
